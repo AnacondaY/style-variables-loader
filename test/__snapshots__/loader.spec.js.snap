@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`=== loader test === inline variables less 1`] = `
+"@var1:red;
+@var2:navy;
+some style content"
+`;
+
+exports[`=== loader test === inline variables sass 1`] = `
+"$var1:red
+$var2:navy
+some style content"
+`;
+
+exports[`=== loader test === inline variables scss 1`] = `
+"$var1:red;
+$var2:navy;
+some style content"
+`;
+
+exports[`=== loader test === inline variables stylus 1`] = `
+"var1=red
+var2=navy
+some style content"
+`;
+
+exports[`=== loader test === input files both types 1`] = `
+"$var1:red;
+$var2:navy;
+some style content"
+`;
+
+exports[`=== loader test === input files from js 1`] = `
+"$var1:red;
+$var2:nav;
+some style content"
+`;
+
+exports[`=== loader test === input files from json 1`] = `
+"$var1:red;
+$var2:navy;
+some style content"
+`;
