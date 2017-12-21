@@ -6,7 +6,8 @@ cache:
 install: 
   - npm i
 script: 
-  - npm test npm run coverage
+  - npm test 
+  - npm run coverage
 before_deploy: 
   - npm run build
 deploy:
