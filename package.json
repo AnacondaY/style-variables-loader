@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
+    "coverage": "jest --coverage",
     "build": "babel src --out-dir lib",
     "lint": "eslint src/**.js"
   },
@@ -17,6 +18,13 @@
     "less",
     "stylus"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnacondaY/style-variables-loader"
+  },
+  "bugs": {
+    "url": "https://github.com/AnacondaY/style-variables-loader/issues"
+  },
   "author": "AnacondaY",
   "license": "MIT",
   "dependencies": {

@@ -4,6 +4,7 @@ cache:
   directories:
     node_modules
   install:
-    yarn
+    npm i
   script:
-    yarn test
+    npm test
+    npm run coverage

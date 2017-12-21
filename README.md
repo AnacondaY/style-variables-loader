@@ -53,7 +53,7 @@
     }
 ```
 ```json
-    // /th theme.json
+    // /theme/theme.json
     {
         "var1": "red",
         "var2": "blue"
@@ -98,16 +98,21 @@
 
 ## Options
 * files: ```String|Array```
+
     定义变量的js或json文件匹配符或路径。
     
 * variables: ```Object```
+
     行内变量, 它的优先级最高。
 
 * style: ```'scss'|'sass'|'less'|'stylus'```
+
     注入变量的类型。默认```'scss'```。
 
 * hot: ```Boolean```
+
     是否支持热替换。默认```true```。
 
 * cwd: ```String```
+
     当前工作目录。默认```process.cwd()```。
