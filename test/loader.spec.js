@@ -54,15 +54,15 @@ describe('=== loader test ===', () => {
     });
 
     describe('input files', () => {
-        test('from js', () => {
-            const result = _loader({
-                files: [
-                    path.resolve(mockDir, 'fromJs.js'),
-                ]
-            });
+        // test('from js', () => {
+        //     const result = _loader({
+        //         files: [
+        //             path.resolve(mockDir, 'fromJs.js'),
+        //         ]
+        //     });
 
-            expect(result).toMatchSnapshot();
-        });
+        //     expect(result).toMatchSnapshot();
+        // });
 
         test('from json', () => {
             const result = _loader({
@@ -74,10 +74,10 @@ describe('=== loader test ===', () => {
             expect(result).toMatchSnapshot();
         });
 
-        test('both types', () => {
-            const result = _loader({ files: './test/mocks/*.*' });
-            expect(result).toMatchSnapshot();
-        });
+        // test('both types', () => {
+        //     const result = _loader({ files: './test/mocks/*.*' });
+        //     expect(result).toMatchSnapshot();
+        // });
     });
 
     describe('hot load', () => {
