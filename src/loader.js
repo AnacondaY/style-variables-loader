@@ -7,29 +7,34 @@ const defaultOptions = {
     files: [],
     variables: {},
     hot: false,
-    cwd: process.cwd()
-}
+    cwd: process.cwd(),
+};
 
-export default function(source){
+export default function (source) {
     this.cacheable();
     let options = getOptions(this);
     options = {
         ...defaultOptions,
-        ...options
-    }
-    let { style, files, cwd, variables, hot } = options;
-    if(typeof files === 'string'){
+        ...options,
+    };
+    let {
+        style, files, cwd, variables, hot,
+    } = options;
+    if (typeof files === 'string') {
         files = glob.sync(files, {
             cwd,
-            absolute: true
+            absolute: true,
         });
     }
     const vars = files.reduce((vars, file) => {
+        if (hot && require.cache[file]) {
+            delete require.cache[file];
+        }
         const data = require(file);
         return Object.assign(vars, data);
     }, {});
-    if(hot){
-        files.forEach(file => {
+    if (hot) {
+        files.forEach((file) => {
             this.addDependency(file);
         });
     }
