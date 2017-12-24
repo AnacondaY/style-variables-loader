@@ -80,20 +80,20 @@ describe('=== loader test ===', () => {
         // });
     });
 
-    describe('hot load', () => {
-        const files = [
-            path.resolve(mockDir, 'fromJs.js'),
-        ];
+    // describe('hot load', () => {
+    //     const files = [
+    //         path.resolve(mockDir, 'fromJs.js'),
+    //     ];
 
-        beforeAll(() => {
-            _loader({ files, hot: true });
-        });
+    //     beforeAll(() => {
+    //         _loader({ files, hot: true });
+    //     });
 
-        test('run by files change', () => {
-            expect(context.addDependency).toHaveBeenCalledTimes(files.length);
-            files.forEach((file) => {
-                expect(context.addDependency).toBeCalledWith(file);
-            });
-        });
-    });
+    //     test('run by files change', () => {
+    //         expect(context.addDependency).toHaveBeenCalledTimes(files.length);
+    //         files.forEach((file) => {
+    //             expect(context.addDependency).toBeCalledWith(file);
+    //         });
+    //     });
+    // });
 });
